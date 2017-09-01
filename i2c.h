@@ -1,38 +1,38 @@
-/* Microchip Technology Inc. and its subsidiaries.  You may use this software 
- * and any derivatives exclusively with Microchip products. 
- * 
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS".  NO WARRANTIES, WHETHER 
- * EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED 
- * WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A 
- * PARTICULAR PURPOSE, OR ITS INTERACTION WITH MICROCHIP PRODUCTS, COMBINATION 
- * WITH ANY OTHER PRODUCTS, OR USE IN ANY APPLICATION. 
+/* Microchip Technology Inc. and its subsidiaries.  You may use this software
+ * and any derivatives exclusively with Microchip products.
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
- * INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND 
- * WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS 
- * BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE.  TO THE 
- * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS 
- * IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF 
+ * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS".  NO WARRANTIES, WHETHER
+ * EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED
+ * WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A
+ * PARTICULAR PURPOSE, OR ITS INTERACTION WITH MICROCHIP PRODUCTS, COMBINATION
+ * WITH ANY OTHER PRODUCTS, OR USE IN ANY APPLICATION.
+ *
+ * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,
+ * INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND
+ * WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS
+ * BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE.  TO THE
+ * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS
+ * IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF
  * ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
  *
- * MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE 
- * TERMS. 
+ * MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE
+ * TERMS.
  */
 
-/* 
- * File:   
- * Author: 
+/*
+ * File:
+ * Author:
  * Comments:
- * Revision history: 
+ * Revision history:
  */
 
 // This is a guard condition so that contents of this file are not included
-// more than once.  
+// more than once.
 #ifndef I2C_H
-#define	I2C_H
+#define I2C_H
 
-#include <xc.h>
 #include <pic16f1829.h>
+#include <xc.h>
 
 // TODO Insert appropriate #include <>
 
@@ -43,7 +43,7 @@
 // Comment a function and leverage automatic documentation with slash star star
 /**
     <p><b>Function prototype:</b></p>
-  
+  
     <p><b>Summary:</b></p>
 
     <p><b>Description:</b></p>
@@ -56,25 +56,24 @@
 
     <p><b>Example:</b></p>
     <code>
- 
+ 
     </code>
 
     <p><b>Remarks:</b></p>
  */
-// TODO Insert declarations or function prototypes (right here) to leverage 
+// TODO Insert declarations or function prototypes (right here) to leverage
 // live documentation
 
-#ifdef	__cplusplus
+#ifdef __cplusplus
 extern "C" {
 #endif /* __cplusplus */
 
-    // TODO If C++ is being used, regular C code needs function names to have C 
-    // linkage so the functions can be used by the c code. 
-    
+// TODO If C++ is being used, regular C code needs function names to have C
+// linkage so the functions can be used by the c code.
 
 #define I2C_WRITE 0
 #define I2C_READ 1
-    
+
 // #pragma config statements should precede project file includes.
 // Use project enums instead of #define for ON and OFF.
 
@@ -85,7 +84,6 @@ void I2C_Master_RepeatedStart(void);
 void I2C_Master_Stop(void);
 void I2C_Master_Write(unsigned d);
 unsigned short I2C_Master_Read(unsigned short a);
-
 
 // Initialise MSSP port. (12F1822 - other devices may differ)
 void i2c_Init(void);
@@ -105,9 +103,8 @@ void i2c_Write(unsigned char data);
 void i2c_Address(unsigned char address, unsigned char mode);
 // i2c_Read - Reads a byte from Slave device
 unsigned char i2c_Read(unsigned char ack);
-#ifdef	__cplusplus
+#ifdef __cplusplus
 }
 #endif /* __cplusplus */
 
-#endif	/* I2C_H */
-
+#endif /* I2C_H */
