@@ -9,3 +9,6 @@
 **.map
 **.hex
 **.X.**
+/pic16f1829_test.X/nbproject/private/
+/build/HT_PIC16F54/
+/dist/HT_PIC16F54/
